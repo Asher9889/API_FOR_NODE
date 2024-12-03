@@ -3,8 +3,7 @@ import connectDB from "../db/connectDB.js";
 
 async function getData(req, res) {
   const query = `
-    SELECT * from nt where trackdate>='2024-11-07' and trackdate<='2024-11-07' ;
-`;
+    SELECT * from nt where trackdate>='2024-11-07' and trackdate<='2024-11-07' ;`;
 
   try {
     const pool = await connectDB();

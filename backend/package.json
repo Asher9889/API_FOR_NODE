@@ -4,11 +4,17 @@
   "description": "for tsting api",
   "main": "app.js",
   "type": "module",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "build": "babel src --out-dir dist --presets=minify"
+    
   },
+  "babel": {
+  "presets": ["@babel/preset-env", "minify"]
+},
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -16,5 +22,11 @@
     "express": "^4.21.1",
     "mssql": "^11.0.1",
     "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-preset-minify": "^0.5.2"
   }
 }
